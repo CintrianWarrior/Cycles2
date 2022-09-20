@@ -1,14 +1,11 @@
 public class Main {
     public static void main(String[] args) {
-        int monthlyDeposit = 15000;
-        int totalDeposit = 0;
-        int i = 0;
-        while (totalDeposit<=2459000) {
-            i++;
-            totalDeposit = totalDeposit + totalDeposit/100;
-            totalDeposit = totalDeposit + monthlyDeposit;
-            System.out.println("Месяц " + i + ", сумма накоплений равна " + totalDeposit + " рублей");
-        }
-        System.out.println(i + " месяцев необходимо для накопления суммы");
+      int population = 12_000_000;
+      double birthRate = (double) 17/1000;
+      double deathRate = (double) 8/1000;
+      for (int i = 1; i<=10; i++) {
+          population = (int) (population + (population*birthRate) - (population*deathRate));
+          System.out.println("Год " + i + ", численность населения составляет " + population);
+      }
     }
 }
