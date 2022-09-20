@@ -1,13 +1,12 @@
 public class Main {
     public static void main(String[] args) {
-      int monthlyDeposit = 15000;
-      int totalDeposit = 0;
-      for (int month = 1; month<=12*9; month++){
-          monthlyDeposit = (monthlyDeposit + monthlyDeposit*7/100);
-          totalDeposit = (totalDeposit + monthlyDeposit);
-          if (month%6 ==0) {
-              System.out.println("Месяц " + month + ", сумма накоплений равна " + totalDeposit + " рублей");
-          }
+      int friday = 2;
+        System.out.println("Сегодня пятница, " + friday + "-е число. Необходимо подготовить отчет.");
+       for (int i=1; i<30; i++){
+           if (i%7==2) {
+               friday=friday+7;
+               System.out.println("Сегодня пятница, " + friday + "-е число. Необходимо подготовить отчет.");
+           }
       }
     }
 }
