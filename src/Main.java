@@ -5,7 +5,9 @@ public class Main {
       for (int month = 1; totalDeposit<12_000_000; month++){
           monthlyDeposit = (monthlyDeposit + monthlyDeposit*0.07);
           totalDeposit = (int) (totalDeposit + monthlyDeposit);
-          System.out.println("Месяц " + month + ", сумма накоплений равна " + totalDeposit + " рублей");
+          if (month%6 ==0) {
+              System.out.println("Месяц " + month + ", сумма накоплений равна " + totalDeposit + " рублей");
+          }
       }
     }
 }
